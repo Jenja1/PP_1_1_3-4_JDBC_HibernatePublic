@@ -1,15 +1,16 @@
-/*package jm.task.core.jdbc;
+package jm.task.core.jdbc;
 
+import jm.task.core.jdbc.dao.UserDaoHibernateImpl;
 import jm.task.core.jdbc.model.User;
 
 public class Main {
     public static void main(String[] args) {
-        UserDaoJDBCImpl userService = new UserDaoJDBCImpl();
+        UserDaoHibernateImpl userService = new UserDaoHibernateImpl();
 
-        // Создание таблицы User(ов)
+
         userService.createUsersTable();
 
-        // Добавление 4 User(ов) в таблицу
+
         userService.saveUser("John", "Doe", (byte) 25);
         System.out.println("User с именем John добавлен в базу данных");
 
@@ -28,13 +29,12 @@ public class Main {
             System.out.println(user);
         }
 
-        // Очистка таблицы User(ов)
+
         userService.cleanUsersTable();
         System.out.println("Таблица пользователей очищена");
 
-        // Удаление таблицы User(ов)
+
         userService.dropUsersTable();
         System.out.println("Таблица пользователей удалена");
     }
 }
-*/
